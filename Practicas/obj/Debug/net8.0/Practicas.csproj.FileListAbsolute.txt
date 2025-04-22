@@ -1,0 +1,14 @@
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\bin\Debug\net8.0\Practicas.exe
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\bin\Debug\net8.0\Practicas.deps.json
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\bin\Debug\net8.0\Practicas.runtimeconfig.json
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\bin\Debug\net8.0\Practicas.dll
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\bin\Debug\net8.0\Practicas.pdb
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.dll
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\refint\Practicas.dll
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.pdb
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.genruntimeconfig.cache
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\ref\Practicas.dll
