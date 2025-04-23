@@ -8,6 +8,7 @@ namespace Practicas
 {
     internal class Semana4
     {
+        int año = 0;
         public void Estaciones()
         {
             /*Considerando las estaciones del año en Perú:
@@ -17,16 +18,16 @@ namespace Practicas
             • Octubre, Noviembre, Diciembre: Primavera
               Si ingresamos el mes del año el algoritmo debe de mostrarnos la estación del año.*/
 
-            int año = 0, mes = 0;
+            int mes = 0;
             bool result = false;
             string estacion = "";
 
             Console.WriteLine("Ingresa el año");
             result = int.TryParse(Console.ReadLine(), out año);
 
-            if (!result)
+            if (!result || año < 0 || año == 0)
             {
-                Console.WriteLine("ingresar un numero entero");
+                Console.WriteLine("ingresar un año valido");
                 return;
             }
 
@@ -40,7 +41,7 @@ namespace Practicas
                               "Noviembre: 11      Diciembre: 12");
             result = int.TryParse(Console.ReadLine(), out mes);
 
-            if (!result)
+            if (!result || mes < 0 || mes == 0)
             {
                 Console.WriteLine("ingresa un numero de mes valido");
                 return;
@@ -86,14 +87,28 @@ namespace Practicas
               de 100 o cuando es múltiplo de 400)
               Se debe de mostrar el número de días del mes*/
 
+            bool result = false;
+
             Console.WriteLine("Ingresa el mes a evaluar: ");
-            string dias = Console.ReadLine();
+            string mes = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(mes))
+            {
+                Console.WriteLine("ingrese un mes valido");
+                return;
+            }
 
             Console.WriteLine("Ingresa el año a evaluar: ");
-            int año = int.Parse(Console.ReadLine());
+            result = int.TryParse(Console.ReadLine(), out año);
+
+            if (!result || año < 0 || año == 0)
+            {
+                Console.WriteLine("ingrese un año valido");
+                return;
+            }
 
             int dia = 0;
-            switch (dias.ToLower())
+            switch (mes.ToLower())
             {
                 case "enero":
                 case "marzo":
@@ -116,7 +131,7 @@ namespace Practicas
 
                 case "febrero":
                     
-                    if (año % 4 == 0)
+                    if ((año % 4 == 0 && año % 100 != 0) || (año % 400 == 0))
                     {
                         dia = 29;
                         Console.WriteLine($"tiene {dia} dias");
@@ -150,40 +165,45 @@ namespace Practicas
               determine el importe de la compra, el importe del descuento, el importe a pagar y la
               cantidad de caramelos de obsequio.*/
 
-            string tipo = "";
-            int cantidad = 0;
+            int cantidad = 0, tipo = 0;
             bool result = false;
             double dcto = 0, total = 0, precio = 0, caramelos = 0;
 
             Console.WriteLine("Ingrese el tipo de chocolate\n" +
                 "========================\n" +
-                "Primor\n" +
-                "Explocion\n" +
-                "Tentacion\n" +
-                "Dulzura");
-            tipo = Console.ReadLine();
+                "1: Primor\n" +
+                "2: Dulzura\n" +
+                "3: Tentacion\n" +
+                "4: Explocion");
 
+            result = int.TryParse(Console.ReadLine(), out tipo);
+
+            if (!result || tipo < 0 || tipo == 0) 
+            {
+                Console.WriteLine("ingrese un tipo de chocolate valido");
+            }
+            
             Console.WriteLine("Ingresar cantidad de chocolates");
             result = int.TryParse(Console.ReadLine(), out cantidad);
 
-            if (!result)
+            if (!result || cantidad < 0 || cantidad == 0)
             {
-                Console.WriteLine("Debe de colocar un valor numerico");
+                Console.WriteLine("Debe de colocar un valor numerico valido");
                 return;
             }
 
             switch (tipo)
             {
-                case "Primor":
+                case 1:
                     precio = 8.5;
                     break;
-                case "Dulzura":
+                case 2:
                     precio = 10;
                     break;
-                case "Tentacion":
+                case 3:
                     precio = 7;
                     break;
-                case "Explocion":
+                case 4:
                     precio = 12.5;
                     break;
 
@@ -203,7 +223,7 @@ namespace Practicas
                 case int cant when (cant >= 10 && cant < 15):
                     dcto = 0.09;
                     break;
-                case int cant when (cant >= 15 && cant < 10):
+                case int cant when (cant >= 15):
                     dcto = 0.115;
                     break;
 
@@ -221,8 +241,7 @@ namespace Practicas
                 caramelos = Math.Ceiling((double)cantidad / 4);
 
             Console.WriteLine($"se entregaran {cantidad}" +
-                $" chocolates y  {caramelos} mas por" +
-                $" {total} soles");
+                $" chocolates, el descuento fue de {dcto} soles por caramelo y  se dieron {caramelos} caramelos más por un total de {total} soles");
         }
 
         public void Biblioteca()
@@ -238,24 +257,79 @@ namespace Practicas
               Visitantes: Multa por día: S/ 1.00
               No se aplica descuento.*/
 
+            int categoria = 0, diasR = 0;
+            bool result = false;
+            double multa = 0, MultaT = 0, dcto = 0, dctoT = 0;
+
             Console.WriteLine("===================DEVOLUCIÓN DE LIBROS===================\n" +
                               "Seleccione el  numero de la categoria a la que pertenece: \n" +
                               "==========================================================\n" +
                               "1: Profesor\n" +
                               "2: Estudiante\n" +
                               "3: Visitante");
-            int categoria = int.Parse(Console.ReadLine());
+            result = int.TryParse(Console.ReadLine(), out categoria);
 
+            if (!result || categoria < 1 || categoria > 3)
+            {
+                Console.WriteLine("ingresar una categoria valida");
+                return;
+            }    
+                
             Console.WriteLine("ingrese la cantidad de dias de retraso:");
-            int diasR = int.Parse(Console.ReadLine());
+            result = int.TryParse(Console.ReadLine(), out diasR);
+            if (!result || diasR < 0)
+            {
+                Console.WriteLine("ingrese un valor numerico valido");
+                return;
+            }
 
             switch (categoria) 
             {
                 case 1:
-                    Console.WriteLine("");
+                    multa = 0.5;
+                    
+                    if (diasR > 10)
+                    {
+                        dcto = 0.2;
+                        dctoT = (multa * diasR) * dcto;
+                        MultaT = (multa * diasR) - dctoT;
+                        Console.WriteLine($"Su multa a pagar es de {MultaT} soles, su descuento aplicado fue de {dctoT} soles");
+                    }
+                    else 
+                    {
+                        dcto = 0.1;
+                        dctoT = (multa * diasR) * dcto;
+                        MultaT = (multa * diasR) - dctoT;
+                        Console.WriteLine($"Su multa a pagar es de {MultaT} soles, su descuento aplicado fue de {dctoT} soles");
+                    }
+                    break;
+
+                case 2:
+                    multa = 0.3;
+
+                    if (diasR > 5)
+                    {
+                        dcto = 0.5;
+                        dctoT = (multa * diasR) * dcto;
+                        MultaT = (multa * diasR) - dctoT;
+                        Console.WriteLine($"Su multa a pagar es de {MultaT} soles, su descuento aplicado fue de {dctoT} soles");
+                    }
+                    else
+                    {
+                        dcto = 0.25;
+                        dctoT = (multa * diasR) * dcto;
+                        MultaT = (multa * diasR) - dctoT;
+                        Console.WriteLine($"Su multa a pagar es de {MultaT} soles, su descuento aplicado fue de {dctoT} soles");
+                    }
+                    break;
+
+                case 3:
+                    multa = 1;
+
+                    MultaT = (multa * diasR);
+                    Console.WriteLine($"Su multa a pagar es de {MultaT} soles");
                     break;
             }
-
         }
 
         public void Tienda()

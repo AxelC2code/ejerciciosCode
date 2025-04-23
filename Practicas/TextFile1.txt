@@ -1,0 +1,46 @@
+﻿Una dulcería vende chocolates a los precios dados en la siguiente tabla:
+Primor S/. 8.5
+Dulzura S/. 10.0
+Tentación S/. 7.0
+Explosión S/. 12.5
+Como oferta, la tienda aplica un porcentaje de descuento sobre el importe de la compra
+basándose en la cantidad de chocolates adquiridos, de acuerdo con la siguiente tabla
+< 5 chocolates descuento de: 4.0%
+= 5 y < 10 chocolates descuento de: 6.5%
+= 10 y < 15 chocolates descuento de: 9.0%
+>= 15 chocolates descuento de: 11.5%
+Adicionalmente, si el importe a pagar es no menor de S/. 250, la tienda obsequia 1
+caramelos por cada 5 chocolate; en caso contrario, obsequia 1 caramelos por cada 4
+chocolate.
+Dado el tipo de chocolate y la cantidad de unidades adquiridas, diseñe un programa que
+determine el importe de la compra, el importe del descuento, el importe a pagar y la
+cantidad de caramelos de obsequio.*/
+
+Una biblioteca impone multas por la devolución tardía de los libros. Los usuarios de la biblioteca se
+clasifican en tres categorías: Estudiante, Profesor y Visitante, y cada categoría tiene una tarifa de multa
+por día distinta. Adicionalmente, dependiendo del tipo de usuario y la cantidad de días de retraso, se
+aplica un descuento a la multa total.
+Estudiantes: Multa por día: S/ 0.50
+Descuento del 20% si el retraso es superior a 10 días; de lo contrario, el descuento es del 10%.
+Profesores: Multa por día: S/ 0.30
+Descuento del 50% si el retraso es superior a 5 días; de lo contrario, el descuento es del 25%.
+Visitantes: Multa por día: S/ 1.00
+No se aplica descuento.*/
+
+
+Una tienda minorista desea implementar un sistema de descuentos para incentivar compras en
+mayor cantidad. Para ello, se han establecido diferentes rangos de descuento según la cantidad
+de productos adquiridos y el día de la semana en que se realiza la compra. Cada cliente, al llegar
+a la caja, tendrá un descuento aplicado en función de estas dos variables:
+Categorías de Descuento por Cantidad:
+Si compra de 1 a 5 productos, no hay descuento.
+De 6 a 10 productos, se aplica un 5% de descuento.
+De 11 a 20 productos, se aplica un 10% de descuento.
+Más de 20 productos, se aplica un 15% de descuento.
+Descuentos Adicionales por Día:
+Los días lunes y jueves, se añade un 5% adicional al descuento por cantidad.
+Los fines de semana (sábado y domingo), se añade un 10% adicional al descuento por cantidad.
+Considerando el precio unitario fijo de S/. 10.00 por producto, diseñe un algoritmo que
+determine el monto total de la compra, el descuento total aplicado y el monto a pagar por el
+cliente. El algoritmo debe solicitar el número de productos adquiridos y el día de la semana de
+la compra para realizar los cálculos.

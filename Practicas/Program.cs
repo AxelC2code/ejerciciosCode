@@ -18,17 +18,18 @@ namespace Practics
             Console.WriteLine("A continuacion verás el problema que elegiste\n");
             Console.WriteLine("=============================================");
 
-            Semana3 Sem3 = new Semana3();
+            //Semana3 Sem3 = new Semana3();
 
-            Sem3.Apretones();
+            //Sem3.Apretones();
 
-            Console.WriteLine(" \n"
-                + "=============================================\n" 
-                + " \n");
+            //Console.WriteLine(" \n"
+            //    + "=============================================\n" 
+            //    + " \n");
 
             Semana4 Sem4 = new Semana4();
 
-            Sem4.Biblioteca();
+            Sem4.Dulceria();
+            
         }
     }
 }

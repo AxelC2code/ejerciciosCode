@@ -12,3 +12,4 @@ C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Pract
 C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.pdb
 C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.genruntimeconfig.cache
 C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\ref\Practicas.dll
+C:\Users\Usuario\OneDrive\Documentos\ING_SISTEMAS\C#\Clases de U\Practicas\Practicas\obj\Debug\net8.0\Practicas.sourcelink.json
