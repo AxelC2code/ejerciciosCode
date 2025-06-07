@@ -11,24 +11,24 @@ namespace Practics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ingresa tu nombre");
-            string name = Console.ReadLine();
+            //Console.WriteLine("Ingresa tu nombre");
+            //string name = Console.ReadLine();
 
-            Console.WriteLine($"ola, {name}\n");
-            Console.WriteLine("A continuacion verás el problema que elegiste\n");
-            Console.WriteLine("=============================================");
+            //Console.WriteLine($"ola, {name}\n");
+            //Console.WriteLine("A continuacion verás el problema que elegiste\n");
+            //Console.WriteLine("=============================================");
 
-            //Semana3 Sem3 = new Semana3();
+            //Semana5V2 Sem5 = new Semana5V2();
 
-            //Sem3.Apretones();
+            //Sem5.ControlRendimientoVelocidad();
 
             //Console.WriteLine(" \n"
-            //    + "=============================================\n" 
+            //    + "=============================================\n"
             //    + " \n");
 
-            Semana4 Sem4 = new Semana4();
+            //Semana4 Sem4 = new Semana4();
 
-            Sem4.Dulceria();
+            //Sem4.Dulceria();
             
         }
     }

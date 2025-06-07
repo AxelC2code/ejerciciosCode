@@ -13,7 +13,31 @@ namespace Practicas
             /*El dueño de una tienda compra un artículo a un precio determinado. el necesita un algoritmo
               que le de el precio al que lo debe de vender según el margen de utilidad solicitado*/
 
+            bool result = false;
+            double CostoProducto = 0.00, utilidad = 0.15, precioVenta = 0;
 
+            Console.WriteLine("ingrese el costo del producto");
+            result = double.TryParse(Console.ReadLine(), out CostoProducto);
+
+            if (!result || CostoProducto < 1)
+            {
+                Console.WriteLine("ingrese un numero valido");
+                return;
+            }
+
+            Console.WriteLine("ingrese el margen de utilidad: (15% o 45% sin el signo de porcentaje)");
+            result = double.TryParse(Console.ReadLine(), out utilidad);
+
+            if (!result|| utilidad == 0 || utilidad < 0)
+            {
+                Console.WriteLine("ingrese un numero valido");
+                return;
+            }
+
+            double porcUtilidad = utilidad / 100;
+            precioVenta = CostoProducto + (CostoProducto * porcUtilidad);
+
+            Console.WriteLine($"el producto se debe de vender a {precioVenta} soles");
         }
 
         public void Porcentaje()

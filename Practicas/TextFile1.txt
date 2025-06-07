@@ -1,46 +1,82 @@
-﻿Una dulcería vende chocolates a los precios dados en la siguiente tabla:
-Primor S/. 8.5
-Dulzura S/. 10.0
-Tentación S/. 7.0
-Explosión S/. 12.5
-Como oferta, la tienda aplica un porcentaje de descuento sobre el importe de la compra
-basándose en la cantidad de chocolates adquiridos, de acuerdo con la siguiente tabla
-< 5 chocolates descuento de: 4.0%
-= 5 y < 10 chocolates descuento de: 6.5%
-= 10 y < 15 chocolates descuento de: 9.0%
->= 15 chocolates descuento de: 11.5%
-Adicionalmente, si el importe a pagar es no menor de S/. 250, la tienda obsequia 1
-caramelos por cada 5 chocolate; en caso contrario, obsequia 1 caramelos por cada 4
-chocolate.
-Dado el tipo de chocolate y la cantidad de unidades adquiridas, diseñe un programa que
-determine el importe de la compra, el importe del descuento, el importe a pagar y la
-cantidad de caramelos de obsequio.*/
-
-Una biblioteca impone multas por la devolución tardía de los libros. Los usuarios de la biblioteca se
-clasifican en tres categorías: Estudiante, Profesor y Visitante, y cada categoría tiene una tarifa de multa
-por día distinta. Adicionalmente, dependiendo del tipo de usuario y la cantidad de días de retraso, se
-aplica un descuento a la multa total.
-Estudiantes: Multa por día: S/ 0.50
-Descuento del 20% si el retraso es superior a 10 días; de lo contrario, el descuento es del 10%.
-Profesores: Multa por día: S/ 0.30
-Descuento del 50% si el retraso es superior a 5 días; de lo contrario, el descuento es del 25%.
-Visitantes: Multa por día: S/ 1.00
-No se aplica descuento.*/
+﻿
 
 
-Una tienda minorista desea implementar un sistema de descuentos para incentivar compras en
-mayor cantidad. Para ello, se han establecido diferentes rangos de descuento según la cantidad
-de productos adquiridos y el día de la semana en que se realiza la compra. Cada cliente, al llegar
-a la caja, tendrá un descuento aplicado en función de estas dos variables:
-Categorías de Descuento por Cantidad:
-Si compra de 1 a 5 productos, no hay descuento.
-De 6 a 10 productos, se aplica un 5% de descuento.
-De 11 a 20 productos, se aplica un 10% de descuento.
-Más de 20 productos, se aplica un 15% de descuento.
-Descuentos Adicionales por Día:
-Los días lunes y jueves, se añade un 5% adicional al descuento por cantidad.
-Los fines de semana (sábado y domingo), se añade un 10% adicional al descuento por cantidad.
-Considerando el precio unitario fijo de S/. 10.00 por producto, diseñe un algoritmo que
-determine el monto total de la compra, el descuento total aplicado y el monto a pagar por el
-cliente. El algoritmo debe solicitar el número de productos adquiridos y el día de la semana de
-la compra para realizar los cálculos.
+
+=====================================================
+
+using System;
+
+public class TiendaDescuentos
+{
+    public static void Main(string[] args)
+    {
+        // Precio unitario fijo
+        const decimal precioUnitario = 10.00m;
+
+        // Solicitar la cantidad de productos
+        Console.Write("Ingrese la cantidad de productos adquiridos: ");
+        if (!int.TryParse(Console.ReadLine(), out int cantidadProductos) || cantidadProductos < 1)
+        {
+            Console.WriteLine("Cantidad inválida. Por favor, ingrese un número mayor o igual a 1.");
+            return;
+        }
+
+        // Solicitar el día de la semana
+        Console.Write("Ingrese el día de la semana (Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo): ");
+        string diaSemana = Console.ReadLine().ToLower();
+
+        // Calcular el descuento por cantidad
+        decimal descuentoPorCantidad = 0;
+        if (cantidadProductos >= 6 && cantidadProductos <= 10)
+        {
+            descuentoPorCantidad = 0.05m; // 5%
+        }
+        else if (cantidadProductos >= 11 && cantidadProductos <= 20)
+        {
+            descuentoPorCantidad = 0.10m; // 10%
+        }
+        else if (cantidadProductos > 20)
+        {
+            descuentoPorCantidad = 0.15m; // 15%
+        }
+
+        // Calcular el descuento adicional por día
+        decimal descuentoAdicionalDia = 0;
+        switch (diaSemana)
+        {
+            case "lunes":
+            case "jueves":
+                descuentoAdicionalDia = 0.05m; // 5% adicional
+                break;
+            case "sabado":
+            case "domingo":
+                descuentoAdicionalDia = 0.10m; // 10% adicional
+                break;
+            default:
+                break; // No hay descuento adicional para otros días
+        }
+
+        // Calcular el descuento total
+        decimal descuentoTotal = descuentoPorCantidad + descuentoAdicionalDia;
+
+        // Calcular el monto total de la compra sin descuento
+        decimal montoTotalSinDescuento = cantidadProductos * precioUnitario;
+
+        // Calcular el monto del descuento aplicado
+        decimal montoDescuentoAplicado = montoTotalSinDescuento * descuentoTotal;
+
+        // Calcular el monto total a pagar
+        decimal montoTotalAPagar = montoTotalSinDescuento - montoDescuentoAplicado;
+
+        // Mostrar los resultados
+        Console.WriteLine("\n--- Resumen de la Compra ---");
+        Console.WriteLine($"Cantidad de productos: {cantidadProductos}");
+        Console.WriteLine($"Día de la semana: {System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(diaSemana)}"); // Formatear el día
+        Console.WriteLine($"Precio unitario: S/. {precioUnitario:F2}");
+        Console.WriteLine($"Monto total sin descuento: S/. {montoTotalSinDescuento:F2}");
+        Console.WriteLine($"Descuento por cantidad: {descuentoPorCantidad:P2}");
+        Console.WriteLine($"Descuento adicional por día: {descuentoAdicionalDia:P2}");
+        Console.WriteLine($"Descuento total aplicado: {descuentoTotal:P2} (S/. {montoDescuentoAplicado:F2})");
+        Console.WriteLine($"Monto total a pagar: S/. {montoTotalAPagar:F2}");
+    }
+}
