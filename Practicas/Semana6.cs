@@ -8,26 +8,35 @@ namespace Practicas
 {
     internal class Semana6
     {
-        //    public void primer()
-        //    {
-        //        /**/
-        //    }
+        public void primer()
+        {
+            /**/
+            void principal()
+            {
+                Console.WriteLine("prueba");
+            }
 
-        //    public void primer()
-        //    {
-        //        /**/
-        //    }
-        //    public void primer()
-        //    {
-        //        /**/
-        //    }
-        //    public void primer()
-        //    {
-        //        /**/
-        //    }
-        //    public void primer()
-        //    {
-        //        /**/
-        //    }
+            int sueldo(int Base, int Hora)
+            {
+                return Base * Hora;
+            }
+        }
+
+        public void segundo()
+        {
+            /**/
+        }
+        public void tercero()
+        {
+            /**/
+        }
+        public void cuarto()
+        {
+            /**/
+        }
+        public void quinto()
+        {
+            /**/
+        }
     }
 }
