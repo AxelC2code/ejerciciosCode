@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\Practicas\\Practicas.csproj": {}
+    "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\borrar\\borrar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\Practicas\\Practicas.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\borrar\\borrar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\Practicas\\Practicas.csproj",
-        "projectName": "Practicas",
-        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\Practicas\\Practicas.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\borrar\\borrar.csproj",
+        "projectName": "borrar",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\borrar\\borrar.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\Practicas\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\ING_SISTEMAS\\C#\\Clases de U\\Practicas\\borrar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net8.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "imports": [
             "net461",
             "net462",
@@ -63,6 +63,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"

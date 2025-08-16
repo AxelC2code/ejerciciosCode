@@ -29,6 +29,8 @@ namespace Practics
             //Semana4 Sem4 = new Semana4();
 
             //Sem4.Dulceria();
+            clsExamenT4 t4 = new clsExamenT4();
+            t4.Principal();
             
         }
     }

@@ -96,9 +96,8 @@ namespace Practicas
             Console.WriteLine($"Descuento adicional por día: {descuentoAdicionalDia:P2}");
             Console.WriteLine($"Descuento total aplicado: {descuentoTotal:P2} (S/. {montoDescuentoAplicado:F2})");
             Console.WriteLine($"Monto total a pagar: S/. {montoTotalAPagar:F2}");
-
         }
-
+       
         public void DosNumeros()
         {
             /*Introducir dos números por teclado. Imprimir los números naturales que hay entre ambos

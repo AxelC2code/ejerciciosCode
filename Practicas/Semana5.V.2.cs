@@ -70,7 +70,7 @@ namespace Practicas
             fue el deportista mas rápido, y cual es el deportista con mejor rendimiento.*/
 
             string nombre = "";
-            string final;
+            
             int tiempo = 0, distancia = 0;
             int menorTiempo = 0;
             string mejorDeportista = "";
@@ -117,5 +117,7 @@ namespace Practicas
             promedio.*/
 
         }
+
+
     }
 }
